@@ -4,20 +4,20 @@ import './SearchBar.css'
 
 const SearchBar = () => {
     return (
-        <div>
-            <form>
+            <form className='search-bar'>
                 <input
                     type="search"
                     placeholder='Procure seu produto'
                     className='search-input'
                     required
                 />
-            </form>
 
-            <button type="submit" className='search-input' >
-                <BsSearch />
-            </button>
-        </div>
+                <button 
+                type="submit" 
+                className='search-button' >
+                    <BsSearch />
+                </button>
+            </form>
     )
 }
 
