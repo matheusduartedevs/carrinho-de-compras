@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import './SearchBar.css'
 
 const SearchBar = () => {
+    const [searchValue, setSearchValue] = useState('')
+
     return (
             <form className='search-bar'>
                 <input
@@ -10,6 +12,8 @@ const SearchBar = () => {
                     placeholder='Procure seu produto'
                     className='search-input'
                     required
+                    value={searchValue}
+                    onChange={({ target }) => setSearchValue(target.value)}
                 />
 
                 <button 
