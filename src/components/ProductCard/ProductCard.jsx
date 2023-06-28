@@ -2,6 +2,7 @@ import React from 'react'
 import './ProductCard.css'
 import { BsFillCartPlusFill } from 'react-icons/bs'
 import propTypes from 'prop-types';
+import formatCurrency from '../../utils/formatCurrency';
 
 
 const ProductCard = ({ data }) => {
@@ -16,7 +17,7 @@ const ProductCard = ({ data }) => {
       />
 
       <div className="card-infos">
-        <h2 className="card-price">{price}</h2>
+        <h2 className="card-price">{formatCurrency(price, 'BRL')}</h2>
         <h2 className="card-title">{title}</h2>
       </div>
 
