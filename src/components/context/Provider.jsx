@@ -6,6 +6,7 @@ const Provider = ({ children }) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const [cartItems, setCartItems] = useState([])
+    const [isCartVisible, setIsCartVisible] = useState(false)
 
     const value = {
         products, 
@@ -13,7 +14,9 @@ const Provider = ({ children }) => {
         loading, 
         setLoading,
         cartItems, 
-        setCartItems
+        setCartItems,
+        isCartVisible, 
+        setIsCartVisible
     }
 
   return (
